@@ -1,0 +1,36 @@
+# ex1 - Lựa chọn Functional Interface
+
+1. Kiểm tra xem một User có phải là Admin hay không (trả về true/false)
+
+Functional Interface: Predicate<User>
+
+Giải thích:
+Predicate dùng để kiểm tra một điều kiện và trả về kết quả boolean (true/false).
+Ở đây ta kiểm tra User có phải Admin hay không nên phù hợp với Predicate.
+
+
+2. Chuyển đổi một đối tượng User thành chuỗi String chứa username
+
+Functional Interface: Function<User, String>
+
+Giải thích:
+Function dùng để biến đổi một dữ liệu đầu vào thành một dữ liệu đầu ra.
+Ở đây đầu vào là User và đầu ra là String nên dùng Function<User, String>.
+
+
+3. In thông tin chi tiết của User ra màn hình Console
+
+Functional Interface: Consumer<User>
+
+Giải thích:
+Consumer dùng khi chỉ thực hiện một hành động với dữ liệu đầu vào và không trả về kết quả.
+Việc in thông tin User ra console chỉ là hành động nên phù hợp với Consumer.
+
+
+4. Khởi tạo một đối tượng User mới với các giá trị mặc định
+
+Functional Interface: Supplier<User>
+
+Giải thích:
+Supplier dùng để cung cấp (tạo ra) một đối tượng mà không cần tham số đầu vào.
+Ở đây ta tạo một User mới nên dùng Supplier<User>.
