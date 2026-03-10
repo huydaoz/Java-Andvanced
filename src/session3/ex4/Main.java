@@ -1,0 +1,21 @@
+package session3.ex4;
+import java.util.*;
+import java.util.stream.Collectors;
+
+record User(String username, String email, String status) {}
+
+public class Main {
+    public static void main(String[] args) {
+        List<User> users = List.of(
+                new User("alice", "alice@gmail.com", "ACTIVE"),
+                new User("bob", "bob@yahoo.com", "INACTIVE"),
+                new User("alice", "alice2@gmail.com", "ACTIVE"),
+                new User("charlie", "charlie@gmail.com", "ACTIVE")
+        );
+        Set<String> seen = new HashSet<>();
+
+        users.stream()
+                .filter(u -> seen.add(u.username()))
+                .forEach(System.out::println);
+    }
+}
